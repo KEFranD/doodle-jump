@@ -32,6 +32,8 @@ let score = 0;
 let maxScore = 0;
 let gameOver = false;
 
+let highScore = 0;
+
 
 window.onload = function () {
   board = document.getElementById("board");
@@ -61,6 +63,10 @@ window.onload = function () {
 function update() {
   requestAnimationFrame(update);
   if (gameOver) {
+    context.clearRect(0, 0, board.width, board.height);
+    context.fillText("Game Over!", boardWidth/4, boardHeight*6/8);
+    context.fillText(`Your score is: ${score}`, boardWidth/4, boardHeight*6/8 + 20);
+    context.fillText("Press 'Space' to Restart", boardWidth/4, boardHeight*6/8 + 60);
     return;
   }
   context.clearRect(0, 0, board.width, board.height);
@@ -98,12 +104,10 @@ function update() {
   updateScore();
   context.fillStyle = "white";
   context.font = "16px sans-serif";
-  context.fillText(score, 5, 20);
-
-  if (gameOver) {
-    context.fillText("Game Over! Press 'Space' to Restart", boardWidth/7, boardHeight*7/8);
-  }
+  context.fillText(score, 10, 20);
+  context.fillText(highScore, 10, 40);
 }
+
 
 function moveDoodler(e) {
   if (e.code == "ArrowRight" || e.code == "KeyD") {
@@ -194,7 +198,9 @@ function updateScore() {
     maxScore += points;
     if (score < maxScore) {
       score = maxScore;
-    }
+    if (score > highScore) {
+      highScore = score;
+    }}
   } else if (velocityY >= 0) {
     maxScore -= points;
   }
