@@ -20,7 +20,7 @@ This is a simple Doodle Jump clone created using vanilla JavaScript, HTML, and C
 
 ## Demo
 
-![doodle-jump-record](https://github.com/KEFranD/doodle-jump/assets/130538538/3c3fff18-599b-4d60-8eb9-ab6d43c89e14)
+![doodle-jump-record-2](https://github.com/KEFranD/doodle-jump/assets/130538538/696f1a48-d9d7-4a19-8533-6d5a6b99bd14)
 
 
 
