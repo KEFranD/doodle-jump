@@ -18,7 +18,9 @@ This is a simple Doodle Jump clone created using vanilla JavaScript, HTML, and C
 **Server:** Vanilla JavaScript
 
 
-## Screenshots
+## Demo
 
-<img width="387" alt="doodle-jump-1" src="https://github.com/KEFranD/doodle-jump/assets/130538538/6e35081e-8328-4e0a-96d4-8820e9c345d7">
-<img width="380" alt="doodle-jump-2" src="https://github.com/KEFranD/doodle-jump/assets/130538538/723dc414-de0d-4a9b-a415-6eef75a095dd">
+![doodle-jump-record](https://github.com/KEFranD/doodle-jump/assets/130538538/3c3fff18-599b-4d60-8eb9-ab6d43c89e14)
+
+
+
