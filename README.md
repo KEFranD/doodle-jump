@@ -2,6 +2,9 @@
 
 This is a simple Doodle Jump clone created using vanilla JavaScript, HTML, and CSS. Doodle Jump is a classic mobile game where you control a character that can jump on platforms to reach higher and higher. In this clone, you can experience the same gameplay mechanics.
 
+Project inspired by:
+Kenny Yip Coding
+
 
 ## Features
 
