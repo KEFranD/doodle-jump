@@ -1,15 +1,18 @@
+// board
 let board;
-let boardWidth = 360;
-let boardHeight = 580;
+let boardWidth = 400;
+let boardHeight = 600;
 let context;
 
-let doodlerWidth = 46;
-let doodlerHeight = 46;
+// doodler
+let doodlerWidth = 66;
+let doodlerHeight = 66;
 let doodlerX = boardWidth/2 - doodlerWidth/2;
 let doodlerY = boardHeight*7/8 - doodlerHeight;
 let doodlerRightImg;
 let doodlerLeftImg;
 
+// doodler obj
 let doodler = {
   img : null,
   x : doodlerX,
@@ -18,48 +21,66 @@ let doodler = {
   height : doodlerHeight
 }
 
+// game's physics
 let velocityX = 0;
 let velocityY = 0;
 let initialVelocityY = -7;
 let gravity = 0.3;
 
+// platform
 let platformArray = [];
-let platformWidth = 60;
-let platformHeight = 18;
+let platformWidth = 80;
+let platformHeight = 25;
 let platformImg;
 
+// score
 let score = 0;
 let maxScore = 0;
 let gameOver = false;
 
 let highScore = 0;
 
+let onPlatform = 0;
 
+
+// executes as soon as page loading:
 window.onload = function () {
+  var startButton = document.getElementById("startButton");
   board = document.getElementById("board");
-  board.height = boardHeight;
-  board.width = boardWidth;
-  context = board.getContext("2d");
+  board.style.display = "none";
 
-  doodlerRightImg = new Image();
-  doodlerRightImg.src = "images/doodler-right.png";
-  doodler.img = doodlerRightImg;
-  doodlerRightImg.onload = function() {
-    context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height);
-  }
+  startButton.addEventListener("click", function () {
+    board.style.display = "block";
+    board.height = boardHeight;
+    board.width = boardWidth;
+    context = board.getContext("2d");
 
-  doodlerLeftImg = new Image();
-  doodlerLeftImg.src = "images/doodler-left.png";
+    // load images
+    doodlerRightImg = new Image();
+    doodlerRightImg.src = "images/doodler-right.png";
+    doodler.img = doodlerRightImg;
+    doodlerRightImg.onload = function() {
+      context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height);
+    }
 
-  platformImg = new Image();
-  platformImg.src = "images/platform.png";
+    doodlerLeftImg = new Image();
+    doodlerLeftImg.src = "images/doodler-left.png";
 
-  velocityY = initialVelocityY
-  placePlatforms();
-  requestAnimationFrame(update);
-  document.addEventListener("keydown", moveDoodler);
+    platformImg = new Image();
+    platformImg.src = "images/platform.png";
+
+    velocityY = initialVelocityY
+    placePlatforms();
+    requestAnimationFrame(update);
+    document.addEventListener("keydown", moveDoodler);
+
+    startButton.style.display = "none";
+  });
+
 }
 
+
+// game loop
 function update() {
   requestAnimationFrame(update);
   if (gameOver) {
