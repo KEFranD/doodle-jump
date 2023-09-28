@@ -12,8 +12,11 @@ This is a simple Doodle Jump clone created using vanilla JavaScript, HTML, and C
 
 
 ## Controls
+
 **Left Arrow** or **A Key**: move Doodler left
+
 **Right Arrow** or **D Key**: move Doodler right
+
 **Space**: Restart game
 
 
