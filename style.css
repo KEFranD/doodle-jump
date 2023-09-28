@@ -1,7 +1,26 @@
-body{
+body {
   text-align: center;
+  max-width: 100%;
 }
 
-#board{
+#board {
   background-image: url("images/grid.png");
+  margin: 0 auto;
+}
+
+#startButton {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(61, 212, 14);
+  border-style: solid;
+  border-color: rgb(35, 34, 34);
+  color: rgb(253, 251, 251);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 22px;
+  font-weight: 600;
 }
