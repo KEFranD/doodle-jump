@@ -1,10 +1,8 @@
-// board
 let board;
 let boardWidth = 400;
 let boardHeight = 600;
 let context;
 
-// doodler
 let doodlerWidth = 66;
 let doodlerHeight = 66;
 let doodlerX = boardWidth/2 - doodlerWidth/2;
@@ -12,7 +10,6 @@ let doodlerY = boardHeight*7/8 - doodlerHeight;
 let doodlerRightImg;
 let doodlerLeftImg;
 
-// doodler obj
 let doodler = {
   img : null,
   x : doodlerX,
@@ -21,19 +18,16 @@ let doodler = {
   height : doodlerHeight
 }
 
-// game's physics
 let velocityX = 0;
 let velocityY = 0;
 let initialVelocityY = -7;
 let gravity = 0.3;
 
-// platform
 let platformArray = [];
 let platformWidth = 80;
 let platformHeight = 25;
 let platformImg;
 
-// score
 let score = 0;
 let maxScore = 0;
 let gameOver = false;
@@ -43,9 +37,8 @@ let highScore = 0;
 let onPlatform = 0;
 
 
-// executes as soon as page loading:
 window.onload = function () {
-  var startButton = document.getElementById("startButton");
+  let startButton = document.getElementById("startButton");
   board = document.getElementById("board");
   board.style.display = "none";
 
@@ -55,7 +48,6 @@ window.onload = function () {
     board.width = boardWidth;
     context = board.getContext("2d");
 
-    // load images
     doodlerRightImg = new Image();
     doodlerRightImg.src = "images/doodler-right.png";
     doodler.img = doodlerRightImg;
@@ -79,8 +71,6 @@ window.onload = function () {
 
 }
 
-
-// game loop
 function update() {
   requestAnimationFrame(update);
   if (gameOver) {
