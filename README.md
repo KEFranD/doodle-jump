@@ -8,9 +8,10 @@ Kenny Yip Coding
 
 ## Features
 
-- Simple gameplay inspired by the classic Doodle Jump game.
+- Gameplay inspired by the classic Doodle Jump game.
 - Randomly generated platforms to create a unique experience every time you play.
-- Score tracking to beat your high score.
+- Current score tracking, and 
+- High score tracking
 - Includes restart functionality.
 
 
