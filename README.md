@@ -26,9 +26,7 @@ Kenny Yip Coding
 
 ## Tech Stack
 
-**Client:** HTML, CSS, JavaScript
-
-**Server:** Vanilla JavaScript
+**Client:** HTML, CSS, Vanilla JavaScript
 
 
 ## Demo
